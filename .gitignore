@@ -1,2 +1,10 @@
 .DS_Store
 node_modules/
+
+# AI tooling (Impeccable skill, local agent config)
+.agents/
+.claude/
+.codex/
+.cursor/
+.gemini/
+.impeccable/
