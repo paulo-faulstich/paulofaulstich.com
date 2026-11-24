@@ -17,6 +17,12 @@ a:focus-visible,summary:focus-visible{outline:2px solid #016030;outline-offset:3
 .hero-copy{max-width:720px}
 .portrait{position:absolute;right:0;bottom:0;height:calc(100% - 88px);width:auto;max-width:58%;aspect-ratio:4/5;object-fit:cover;object-position:center top;display:block}
 .fade{-webkit-mask-image:linear-gradient(to right,transparent 0,#000 22%);mask-image:linear-gradient(to right,transparent 0,#000 22%)}
+.rail{display:none}
+@media (min-width:1420px){
+.rail{position:absolute;left:calc(50% - 608px - 60px);top:128px;bottom:40px;width:20px;display:flex;flex-direction:column;align-items:center;gap:16px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#3A3A3A}
+.rail span{writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap}
+.rail i{flex:1;width:1px;background:#060606}
+}
 .scroll{animation:nudge 2.4s ease-in-out infinite}
 @keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
 @media (max-width:1200px){.portrait{max-width:50%}}
