@@ -38,6 +38,7 @@ h2{margin:12px 0 0;font-weight:900;font-stretch:112%;font-size:clamp(40px,6.2vw,
 .who i{width:7px;height:7px;border-radius:50%;background:var(--hf)}
 .who span{opacity:.7}
 .who em{font-style:normal;color:var(--hf2)}
+.who b{font-weight:inherit}
 .who:hover{color:var(--hf2)}
 .bar nav{display:flex;flex-wrap:wrap;gap:4px 32px}
 .bar nav a{padding:14px 0}
@@ -207,7 +208,10 @@ h2{margin:12px 0 0;font-weight:900;font-stretch:112%;font-size:clamp(40px,6.2vw,
   .about-side{margin-top:56px;padding:32px 0 0;border-left:0;border-top:1px solid var(--rule);gap:24px}
   .statement span{white-space:normal}
   .hero{height:auto;padding-bottom:20px;display:flex;flex-direction:column;gap:16px}
-  .ghost,.grid,.cue,.rail{display:none}
+  .grid,.cue,.rail{display:none}
+  .who b,.who span{display:none}
+  .bar a{white-space:nowrap}
+  .ghost{left:var(--pad);right:var(--pad);top:5vw;font-size:13.6vw;text-align:center}
   .photo{position:relative;left:auto;transform:none;height:auto;width:min(100%,460px);margin:0 auto}
   .stack{position:static;width:auto;order:2;margin-top:-56px}
   .tagline{margin-top:24px}
@@ -220,12 +224,13 @@ h2{margin:12px 0 0;font-weight:900;font-stretch:112%;font-size:clamp(40px,6.2vw,
   .when{padding-top:0}
   .faq details p{padding-right:0}
 }
-@media (max-width:560px){
+@media (max-width:720px){
   .bar{flex-wrap:wrap;gap:0 16px}
   .bar{font-size:12px;letter-spacing:.03em}
   .bar nav{order:3;flex-basis:100%;gap:0 16px}
   .who{font-size:11px;letter-spacing:.1em;gap:8px}
-  .who span,.who em{display:none}
+}
+@media (max-width:560px){
   .big{font-size:clamp(56px,21.5vw,84px)}
   .card{flex-basis:86vw}
   .open{right:12px;bottom:12px;min-height:44px;gap:12px}
