@@ -14,10 +14,21 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="v3/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="v3/v3.css?v=9108e454">
+<link rel="stylesheet" href="v3/v3.css?v=a7601e8c">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <button class="burger x" type="button"><span class="sr">Close menu</span><i aria-hidden="true"></i><i aria-hidden="true"></i></button>
+  <nav aria-label="Menu">
+    <a href="#about">About</a>
+    <a href="#work">Projects</a>
+    <a href="#path">Experience</a>
+    <a href="#contact">Let's talk</a>
+  </nav>
+  <p>Paulo Faulstich<br>Fintech · Web3 · AI</p>
+</div>
 
 <div class="stage" id="top">
 <header class="bar">
@@ -29,6 +40,7 @@
     
   </nav>
   <a class="talk-top" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+  <button class="burger" type="button" aria-expanded="false" aria-controls="menu"><span class="sr">Menu</span><i aria-hidden="true"></i><i aria-hidden="true"></i></button>
 </header>
 <script>(function(){var b=document.querySelector('.bar'),r=document.documentElement;function s(){r.style.setProperty('--bar-h',b.offsetHeight+'px')}s();if('ResizeObserver'in window)new ResizeObserver(s).observe(b)})();</script>
 
@@ -262,6 +274,6 @@
   <p class="fine"><span>© 2026 Paulo Faulstich</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></p>
 </footer>
 
-<script src="v3/v3.js?v=9108e454" defer></script>
+<script src="v3/v3.js?v=a7601e8c" defer></script>
 </body>
 </html>
