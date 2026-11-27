@@ -248,6 +248,11 @@ html.menu-on{overflow:hidden}
 }
 @media (max-width:560px){
   .big{font-size:clamp(56px,21.5vw,84px)}
+  .hero{height:calc(100svh - var(--bar-h,72px));min-height:560px;max-height:calc(min(100vw - 2*var(--pad),460px)*1.25 + 300px);gap:0;padding-bottom:24px}
+  .photo{flex:1 1 0;min-height:0;width:auto;max-width:100%;align-self:center;margin:0}
+  .stack{margin-top:-48px}
+  .tagline{margin-top:18px}
+  .cta{margin-top:20px}
   .card{flex-basis:86vw}
   .open{right:12px;bottom:12px;min-height:44px;gap:12px}
 }
