@@ -109,11 +109,22 @@
 
   <div class="track" id="track" tabindex="0" aria-label="Projects, scroll horizontally">
     <article class="card">
-      <a class="scene s-sage" href="https://github.com/paulo-faulstich/ev-charging-billing" target="_blank" rel="noopener" aria-label="EV ChargeOps on GitHub">
-        <span class="num" aria-hidden="true">01</span>
-        <span class="win"><img src="assets/ev-dashboard.webp" width="1600" height="1000" alt="EV ChargeOps overview of a closed month: energy, assigned sessions and daily consumption"></span>
-        <span class="open">View project <span aria-hidden="true">↗</span></span>
-      </a>
+      <div class="stage" data-shots>
+        <a class="scene s-sage" href="https://github.com/paulo-faulstich/ev-charging-billing" target="_blank" rel="noopener" aria-label="EV ChargeOps on GitHub">
+          <span class="num" aria-hidden="true">01</span>
+          <span class="win">
+            <img class="on" data-cap="Overview" src="assets/ev-overview.webp" width="1600" height="1000" alt="EV ChargeOps overview of a closed month: energy, assigned sessions and daily consumption">
+            <img data-cap="Closing" src="assets/ev-closing.webp" width="1600" height="1000" loading="lazy" alt="Closing screen: sessions assigned, energy to bill, what the building recovered and the invoices issued per unit">
+            <img data-cap="Invoice" src="assets/ev-invoice.webp" width="1600" height="1000" loading="lazy" alt="Invoice for one unit: the total, its three components and the charging sessions behind it">
+          </span>
+          <span class="open">View project <span aria-hidden="true">↗</span></span>
+        </a>
+        <div class="shots" hidden>
+          <button type="button" aria-label="Previous screen">←</button>
+          <p class="shots-cap" aria-live="polite"></p>
+          <button type="button" aria-label="Next screen">→</button>
+        </div>
+      </div>
       <p class="tags">Billing <span aria-hidden="true">·</span> Reconciliation <span aria-hidden="true">·</span> Prototype</p>
       <h3>EV ChargeOps</h3>
       <p class="one">Turns a shared charger's export into an auditable invoice per apartment.</p>
