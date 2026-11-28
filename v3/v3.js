@@ -196,6 +196,7 @@
       if (track.__io) track.__io.disconnect();
       track.removeAttribute('tabindex');
       track.addEventListener('focusin', function (e) {
+        if (e.target.closest && e.target.closest('.shots')) return;
         var c = e.target.closest && e.target.closest('.card');
         if (c && pin) window.scrollTo(0, pin.top + pin.len * Array.prototype.indexOf.call(cards, c) / (cards.length - 1));
       });
@@ -293,4 +294,32 @@
     }
   });
   if (window.matchMedia) window.matchMedia('(min-width:721px)').addEventListener('change', function (e) { if (e.matches && menu.classList.contains('on')) set(false, true); });
+})();
+
+// Screenshot sliders inside a project card: several screens in one window.
+(function () {
+  var sliders = document.querySelectorAll('[data-shots]');
+  Array.prototype.forEach.call(sliders, function (el) {
+    var imgs = el.querySelectorAll('.win img');
+    var nav = el.querySelector('.shots');
+    if (!nav || imgs.length < 2) return;
+    var cap = nav.querySelector('.shots-cap');
+    var btns = nav.querySelectorAll('button');
+    var index = 0;
+    function show(i) {
+      index = (i + imgs.length) % imgs.length;
+      Array.prototype.forEach.call(imgs, function (img, n) { img.classList.toggle('on', n === index); });
+      cap.textContent = '';
+      cap.appendChild(document.createTextNode(imgs[index].getAttribute('data-cap') || ''));
+      var b = document.createElement('b');
+      b.textContent = (index + 1) + ' / ' + imgs.length;
+      cap.appendChild(b);
+    }
+    // The other screens are lazy; fetch them once the first one is asked for.
+    function warm() { Array.prototype.forEach.call(imgs, function (img) { img.loading = 'eager'; }); }
+    btns[0].addEventListener('click', function () { warm(); show(index - 1); });
+    btns[1].addEventListener('click', function () { warm(); show(index + 1); });
+    nav.hidden = false;
+    show(0);
+  });
 })();

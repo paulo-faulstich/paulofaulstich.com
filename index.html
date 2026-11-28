@@ -14,7 +14,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="v3/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="v3/v3.css?v=4fcd0cbb">
+<link rel="stylesheet" href="v3/v3.css?v=af669a2f">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -122,11 +122,22 @@
     </article>
 
     <article class="card">
-      <a class="scene s-violet" href="https://github.com/paulo-faulstich/rpc-reliability-monitor" target="_blank" rel="noopener" aria-label="RPC reliability monitor on GitHub">
-        <span class="num" aria-hidden="true">02</span>
-        <span class="win"><img src="assets/rpc-dashboard.webp" width="1600" height="827" loading="lazy" alt="RPC reliability monitor dashboard comparing three providers on a Chainlink BTC/USD feed"></span>
-        <span class="open">View project <span aria-hidden="true">↗</span></span>
-      </a>
+      <div class="stage" data-shots>
+        <a class="scene s-violet" href="https://github.com/paulo-faulstich/rpc-reliability-monitor" target="_blank" rel="noopener" aria-label="RPC reliability monitor on GitHub">
+          <span class="num" aria-hidden="true">02</span>
+          <span class="win">
+            <img class="on" data-cap="Overview" src="assets/rpc-overview.webp" width="1600" height="1000" loading="lazy" alt="RPC reliability monitor overview: recommended primary, healthy providers and a response time chart for three providers on a Chainlink BTC/USD feed">
+            <img data-cap="Providers" src="assets/rpc-providers.webp" width="1600" height="1000" loading="lazy" alt="Providers screen: latency, median, success rate, block height and feed answer for each provider">
+            <img data-cap="Activity" src="assets/rpc-activity.webp" width="1600" height="1000" loading="lazy" alt="Activity screen: a log of recent checks with the primary provider and the fastest response">
+          </span>
+          <span class="open">View project <span aria-hidden="true">↗</span></span>
+        </a>
+        <div class="shots" hidden>
+          <button type="button" aria-label="Previous screen">←</button>
+          <p class="shots-cap" aria-live="polite"></p>
+          <button type="button" aria-label="Next screen">→</button>
+        </div>
+      </div>
       <p class="tags">Chainlink Data Feeds <span aria-hidden="true">·</span> Ethereum Sepolia <span aria-hidden="true">·</span> Prototype</p>
       <h3>RPC reliability monitor</h3>
       <p class="one">Compares RPC providers on a Chainlink price feed: response time, availability and data freshness.</p>
@@ -135,17 +146,22 @@
     </article>
 
     <article class="card">
-      <a class="scene s-ink" href="https://github.com/paulo-faulstich/hedera-star-loyalty" target="_blank" rel="noopener" aria-label="Loyalty token prototype on GitHub">
-        <span class="num" aria-hidden="true">03</span>
-        <span class="token" aria-hidden="true">
-          <span class="t-net">On Hedera testnet</span>
-          <span class="t-sym">STAR</span>
-          <span class="t-row"><b>Token</b> 0.0.9015462</span>
-          <span class="t-row"><b>Audit topic</b> 0.0.9015468</span>
-          <span class="t-row"><b>Supply</b> 10,000 fixed</span>
-        </span>
-        <span class="open">View project <span aria-hidden="true">↗</span></span>
-      </a>
+      <div class="stage" data-shots>
+        <a class="scene s-ink" href="https://github.com/paulo-faulstich/hedera-star-loyalty" target="_blank" rel="noopener" aria-label="Loyalty token prototype on GitHub">
+          <span class="num" aria-hidden="true">03</span>
+          <span class="win">
+            <img class="on" data-cap="Brand" src="assets/hedera-brand.webp" width="1600" height="1000" loading="lazy" alt="Brand console of the loyalty prototype: royalty earned, rewards issued, treasury balance, redemption rate and a chart of the member balance">
+            <img data-cap="Member" src="assets/hedera-member.webp" width="1600" height="1000" loading="lazy" alt="Member view: STAR balance, a form to redeem with the brand and the earn and redeem history">
+            <img data-cap="Platform" src="assets/hedera-platform.webp" width="1600" height="1000" loading="lazy" alt="Platform console: token schema, account balances and the transfers with the fees the network assessed">
+          </span>
+          <span class="open">View project <span aria-hidden="true">↗</span></span>
+        </a>
+        <div class="shots" hidden>
+          <button type="button" aria-label="Previous screen">←</button>
+          <p class="shots-cap" aria-live="polite"></p>
+          <button type="button" aria-label="Next screen">→</button>
+        </div>
+      </div>
       <p class="tags">Hedera <span aria-hidden="true">·</span> Testnet <span aria-hidden="true">·</span> Prototype</p>
       <h3>Loyalty token prototype</h3>
       <p class="one">A loyalty token and audit trail built on Hedera's token and messaging services.</p>
@@ -274,6 +290,6 @@
   <p class="fine"><span>© 2026 Paulo Faulstich</span><a href="#top">Back to top <span aria-hidden="true">↑</span></a></p>
 </footer>
 
-<script src="v3/v3.js?v=4fcd0cbb" defer></script>
+<script src="v3/v3.js?v=af669a2f" defer></script>
 </body>
 </html>
